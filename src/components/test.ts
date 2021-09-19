@@ -1,7 +1,7 @@
-interface Starship {
+export interface Starship {
     name: string;
     enable: boolean;
-    age:number;
+    age?:number;
 }
 
 // T => generic type
