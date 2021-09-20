@@ -9,15 +9,18 @@ const SpringAnimation = () => {
         color: isToggled? '#000':'green',
         // fontSize: isToggled? '2rem':'5em',
         // transform: isToggled ? 'translate3d(0,0,0)':'translate3d(-50px,-50px,-50px)'
-        y: isToggled ? 0 : -50
+        y: isToggled ? 0 : 1
     })
 
+    // This is how we add range
+    // y.to([0,.25,.5,.75,1],[0,-25,-50,-100,-50])
+    // to(y,value => `translate3d(0,${value}px,0)`)
     return (
         <div style={{textAlign:'center',marginTop:'5em'}}>
             <animated.h1 style={{
-                transform: to(y,top =>`translate3d(0,${top}px,0)`),
+                transform: y.to([0,.25,.5,.75,1],[0,-25,-50,-100,-50]).to(top =>`translate3d(0,${top}px,0)`),
                 color,
-            }}>Hello</animated.h1>
+            }}>Range</animated.h1>
             <button onClick={() => setToggled(!isToggled)}>
                 Toggle
             </button>

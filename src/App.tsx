@@ -7,7 +7,8 @@ import BreadCrumb from './components/BreadCrumb/BreadCrumb'
 import { FrameMotion } from './components/FrameMotion/FrameMotion.js';
 
 import {useSpring,animated} from 'react-spring'
-import SpringAnimation from './components/SpringAnimation/SpringAnimation';
+import SpringAnimation from './components/SpringAnimation/RangeAndOutput';
+import Transation from './components/SpringAnimation/Transation';
 
 import Nav from './components/SpringAnimation/Nav'
 import Checkout from './components/SpringAnimation/Checkout'
@@ -37,6 +38,7 @@ const navAnimation = useSpring({
       </header>
     <main>
     <SpringAnimation />
+    <Transation/>
     <Checkout isOpen={isNavOpen}/>
     </main>
     </animated.div>
