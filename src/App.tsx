@@ -13,6 +13,7 @@ import Transation from './components/SpringAnimation/Transation';
 import Nav from './components/SpringAnimation/Nav'
 import Checkout from './components/SpringAnimation/Checkout'
 import Routes from './components/SpringAnimation/Routes'
+import ModelWrapper from './components/SpringAnimation/Model'
 
 const App = () => {
 const [isNavOpen,setNavOpen] = useState(false)
@@ -36,10 +37,13 @@ const navAnimation = useSpring({
         >Menu</button>
         {/* <Nav style={navAnimation}/> */}
       </header>
-    <main>
+    {/* <main> */}
     {/* <SpringAnimation />
     <Transation/> */}
-    <Routes/>
+    {/* <Routes/>
+    </main> */}
+    <main>
+      <ModelWrapper/>
     </main>
     <Checkout isOpen={isNavOpen}/>
     </animated.div>
