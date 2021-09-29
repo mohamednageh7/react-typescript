@@ -14,6 +14,8 @@ import Nav from './components/SpringAnimation/Nav'
 import Checkout from './components/SpringAnimation/Checkout'
 import Routes from './components/SpringAnimation/Routes'
 import ModelWrapper from './components/SpringAnimation/Model'
+import Accoridion from './components/SpringAnimation/Accordion'
+import Waypoints from './components/SpringAnimation/Waypoints'
 
 const App = () => {
 const [isNavOpen,setNavOpen] = useState(false)
@@ -44,6 +46,8 @@ const navAnimation = useSpring({
     </main> */}
     <main>
       <ModelWrapper/>
+      <Accoridion/>
+      <Waypoints/>
     </main>
     <Checkout isOpen={isNavOpen}/>
     </animated.div>
