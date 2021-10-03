@@ -17,6 +17,8 @@ import ModelWrapper from './components/SpringAnimation/Model'
 import Accoridion from './components/SpringAnimation/Accordion'
 import Waypoints from './components/SpringAnimation/Waypoints'
 import Geuster from './components/SpringAnimation/Geuster'
+import Boxes from './components/SpringAnimation/Boxes'
+import UseChain from './components/SpringAnimation/UseChain'
 
 const App = () => {
 const [isNavOpen,setNavOpen] = useState(false)
@@ -32,7 +34,7 @@ const navAnimation = useSpring({
 
 
   return (
-    <animated.div style={fade}> 
+    <animated.div > 
      <header className="App-header">
         <img src={logo} className="logo" />
         <button className="menu-button"
@@ -49,7 +51,9 @@ const navAnimation = useSpring({
       <ModelWrapper/>
       <Accoridion/>
       {/* <Waypoints/> */}
-      <Geuster/>
+      {/* <Geuster/> */}
+      {/* <Boxes/> */}
+      <UseChain/>
           </main>
     <Checkout isOpen={isNavOpen}/>
     </animated.div>
